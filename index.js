@@ -82,7 +82,7 @@ class Dog //* The class for Dogs
         }
     }
 }
-
+const colors = [`red`,`brown`,`white`,`tortoise`,`ginger`,`chocolate`,`blue`,`invisible`]
 //* All the different animals
 const mouse1= new Mouse(1,"brown",true);
 const mouse2= new Mouse(4,"white",true);
@@ -109,4 +109,7 @@ module.exports =
     dog1,
     dog2,
     dog3,
+    colors,
+    dog4,
+    dog5,
 }

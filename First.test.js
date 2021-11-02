@@ -55,3 +55,11 @@ test(`that huge cat dies`,()=>
     index.cat1.size=5; //* Teardown
     index.cat1.alive=true; //* Teardown
 })
+test(`that cat3 has a proper color. SHOULD FAIL`,()=>
+{
+    expect(index.colors).toContain(index.cat3.color)
+})
+test(`that cat2 has a proper color.`,()=>
+{
+    expect(index.colors).toContain(index.cat2.color)
+})

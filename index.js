@@ -92,7 +92,9 @@ const cat2= new Cat(4,"ginger",7,true);
 const cat3= new Cat(7,"ugly",8,true);
 const dog1 = new Dog(8,"chocolate",7,true)
 const dog2 = new Dog(3,"blue",3,false);
-const dog3 = new Dog(3,"invisible",3,true)
+const dog3 = new Dog(2,"invisible",3,true);
+const dog4 = new Dog(4,"yellow",3,false);
+const dog5 = new Dog(6,":)",3,true)
 
 //*Exporting to be used in tests
 module.exports = 

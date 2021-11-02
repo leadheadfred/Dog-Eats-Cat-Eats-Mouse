@@ -1,34 +1,34 @@
-class Mouse
+class Mouse //* The class for Mice
 {
-    constructor(size,color,alive)
+    constructor(size,color,alive) //*The attributes of my mice. Mice are never hungry
     {
         this.size=size;
         this.color=color;
         this.alive=alive
     }
-    mouseEaten()
+    mouseEaten() //* Runs when the mouse gets eaten, it dies
     {
         this.alive=false;
     }
-    grow()
+    grow() //* The mouse grows. If it grows too big, it dies.
     {
         this.size=this.size+1;
-        if (this.size>10)
+        if (this.size>5)
         {
             this.alive=false
         }
     }
 }
-class Cat
+class Cat //* The class for Cats
 {
-    constructor(size,color,hungry,alive)
+    constructor(size,color,hungry,alive) //* The attributes of my Cats
     {
         this.size=size;
         this.color=color;
         this.hungry=hungry;
         this.alive=alive
     }
-    grow()
+    grow()  //* The cat grows. This makes its hungry. If it grows too big, it dies.
     {
         this.size=this.size+1;
         this.hunger=this.hunger+1;
@@ -37,7 +37,7 @@ class Cat
             this.alive=false
         }
     }
-    eat(mouse)
+    eat(mouse) //* The cat eats a mouse if its hungry, otherwise it returns not hungry
     {
         if (this.hunger>5)
         {
@@ -46,33 +46,30 @@ class Cat
         }
         else
         {
-            //console.log("Cat not hungry")
+            return "Cat not hungry"
         }
     }
-    catEaten()
+    catEaten() //* The cat gets eaten, so its dead.
     {
         this.alive=false;
     }
 }
-class Dog
+class Dog //* The class for Dogs
 {
-    constructor(size,color,hungry,ball)
+    constructor(size,color,hungry,ball) //* The attributes of my Dogs
     {
         this.size=size;
         this.color=color;
         this.hungry=hungry;
-        this.ball=ball
+        this.ball=ball;
     }
-    grow()
+    grow()  //* The dog grows. This makes it hungry. Big dogs don't die
     {
         this.size=this.size+1;
         this.hunger=this.hunger+1;
-        if (this.size>10)
-        {
-            this.alive=false
-        }
+
     }
-    eat(cat)
+    eat(cat) //* The dog eats a cat if it doesn't have a ball in its mouth
     {
         if (this.hunger>5 && this.ball==false)
         {
@@ -81,10 +78,12 @@ class Dog
         }
         else
         {
-            //console.log("Dog not hungry or mouth is full")
+             return "Dog not hungry or mouth is full";
         }
     }
 }
+
+//* All the different animals
 const mouse1= new Mouse(1,"brown",true);
 const mouse2= new Mouse(4,"white",true);
 const mouse3= new Mouse(7,"ugly",true);
@@ -92,8 +91,10 @@ const cat1= new Cat(1,"tortoise",5,true);
 const cat2= new Cat(4,"ginger",7,true);
 const cat3= new Cat(7,"ugly",8,true);
 const dog1 = new Dog(8,"chocolate",7,true)
-const dog2 = new Dog(3,"blue",3,false)
+const dog2 = new Dog(3,"blue",3,false);
+const dog3 = new Dog(3,"invisible",3,true)
 
+//*Exporting to be used in tests
 module.exports = 
 {
     Mouse,
@@ -107,4 +108,5 @@ module.exports =
     Dog,
     dog1,
     dog2,
+    dog3,
 }

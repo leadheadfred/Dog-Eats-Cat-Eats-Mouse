@@ -69,7 +69,7 @@ class Dog //* The class for Dogs
         this.hunger=this.hunger+1;
 
     }
-    eat(cat) //* The dog eats a cat if it doesn't have a ball in its mouth
+    eat(cat) //* The dog eats a cat if it is hungry and doesn't have a ball in its mouth
     {
         if (this.hunger>5 && this.ball==false)
         {

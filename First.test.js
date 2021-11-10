@@ -57,7 +57,7 @@ test(`that huge cat dies`,()=>
 })
 test(`that cat3 has a proper color. SHOULD FAIL`,()=>
 {
-    expect(index.colors).toContain(index.cat3.color)
+    expect(index.colors).not.toContain(index.cat3.color)
 })
 test(`that cat2 has a proper color.`,()=>
 {
